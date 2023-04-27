@@ -16,7 +16,9 @@ export default function App() {
         style={styles.imagem}
         source={require('./spotify_white.png')}/>
         <TouchableOpacity style={styles.button}>
+      <View>
       <Text style={styles.text}>Baixar o Spotify</Text>
+      </View>
       <Text style={styles.text2}>Escute milhões de músicas e podcasts no seu dispositivo</Text>
 
     </TouchableOpacity>    
@@ -47,11 +49,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#191414",
   },
   text: {
-    color: "white"
+    color: "white",
+    marginTop:85
   },
   text2: {
     color: "white",
-    marginTop: 100, 
-    justifyContent: "center",
+    marginTop: 70,
+    width: 350,
+    textAlign: 'center',
+    fontSize: 12
   }
 });
