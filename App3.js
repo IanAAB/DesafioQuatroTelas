@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import App from './App';
+import App2 from './App2'; 
+import App4 from './App4';
 import {
   StyleSheet,
   Text,
@@ -11,6 +16,13 @@ import {
 } from "react-native";
 export default function App() {
   return (
+    <NavigationContainer>
+      <Stack.Navigator>
+      <Stack.Screen name="App" component={App}/>
+        <Stack.Screen name="App2" component={App2} />
+        <Stack.Screen name="App4" component={App4} />
+      </Stack.Navigator>
+    </NavigationContainer>
     <View style={styles.container}>
     <Image
         style={styles.imagem}

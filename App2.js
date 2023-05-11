@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import App from './App';
+import App3 from './App3';
+import App4 from './App4';
 import {
   StyleSheet,
   Text,
@@ -13,7 +18,13 @@ export default function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
-
+<NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="App" component={App} />
+        <Stack.Screen name="App3" component={App3} />
+        <Stack.Screen name="App4" component={App4} />
+      </Stack.Navigator>
+    </NavigationContainer>
     <View style={styles.container}>
     <Image
         style={styles.imagem}
